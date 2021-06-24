@@ -11,16 +11,12 @@ import { Button } from '../components/Button';
 import '../styles/auth.scss';
 
 export function Home() {
+
   const history = useHistory();
 
   function handleCreateRoom() {
-    const provider = new firebase.auth.GoogleAuthProvider();
 
-    auth.signInWithPopup(provider).then(resutl => {
-      console.log(resutl);
-    })
-
-    // history.push('/rooms/new');
+    history.push('/rooms/new');
   }
 
   return (
